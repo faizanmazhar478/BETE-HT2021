@@ -121,7 +121,7 @@ palette = setNames(c('green', 'pink'), nm = c('switching', 'without switching'))
 
 
 # Create a line plot with head to head comparison of two strategies
-p <- ggplot(data = results) +
+ggplot(data = results) +
     geom_line(aes(x = game, y = cumulative_per_always_switch, col = names(palette[1])), size = linesize) +
     geom_line(aes(x = game, y = cumulative_per_dont_switch, col = names(palette[2])), size = linesize) +
     scale_x_continuous(breaks = x_breaks) +
